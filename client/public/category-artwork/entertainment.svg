@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="entertainment category illustration">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6d4c88"/><stop offset="1" stop-color="#d5a1e8"/></linearGradient></defs>
+ <rect width="900" height="520" fill="url(#g)"/>
+ <circle cx="112" cy="99" r="158" fill="#fff" opacity=".075"/><circle cx="836" cy="452" r="260" fill="#fff" opacity=".075"/>
+ <path d="M-30 416 Q280 282 918 460" fill="none" stroke="#fff" stroke-width="14" opacity=".13"/>
+ <rect x="279" y="200" width="347" height="198" rx="18" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-width="9"/><path d="M285 200l-18-60 340-70 15 62z" fill="#fff" fill-opacity=".25" stroke="#fff" stroke-width="9"/><path d="M348 126l35 63m30-76l34 63m30-77l34 63m30-76l34 63" stroke="#fff" stroke-width="9"/><path d="M418 253l95 48-95 48z" fill="#fff"/>
+ <text x="44" y="463" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".85">ENTERTAINMENT</text>
+</svg>

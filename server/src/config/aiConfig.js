@@ -1,0 +1,6 @@
+export const AI_CONFIG = {
+  chatModel: process.env.OPENAI_CHAT_MODEL || 'gpt-4o-mini',
+  embeddingModel: process.env.OPENAI_EMBEDDING_MODEL || 'text-embedding-3-small',
+  vectorIndex: process.env.MONGODB_VECTOR_INDEX || 'bookmark_vector_index',
+  enabled: Boolean(process.env.OPENAI_API_KEY),
+};

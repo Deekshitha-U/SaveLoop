@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import { stats, listUsers, getUser, patchUser } from '../controllers/adminController.js';
+import { requireAdmin } from '../middleware/requireAdmin.js';
+import { validateBody } from '../middleware/validateRequest.js';
+import { adminUserPatchSchema } from '../validators/schemas.js';
+const router = Router();
+router.use(requireAdmin);
+router.get('/stats', stats);
+router.get('/users', listUsers);
+router.get('/users/:id', getUser);
+router.patch('/users/:id', validateBody(adminUserPatchSchema), patchUser);
+export default router;

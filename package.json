@@ -1,0 +1,14 @@
+{
+  "name": "saveloop-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently -k -n FRONTEND,BACKEND -c cyan,magenta \"npm run dev -w client\" \"npm run dev -w server\"",
+    "dev:client": "npm run dev -w client",
+    "dev:server": "npm run dev -w server",
+    "build": "npm run build -w client",
+    "test": "npm run test -w server"
+  },
+  "devDependencies": {"concurrently": "^9.2.1"}
+}

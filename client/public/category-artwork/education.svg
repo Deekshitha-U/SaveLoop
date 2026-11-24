@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="education category illustration">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#425b96"/><stop offset="1" stop-color="#aab5fb"/></linearGradient></defs>
+ <rect width="900" height="520" fill="url(#g)"/>
+ <circle cx="112" cy="99" r="158" fill="#fff" opacity=".075"/><circle cx="836" cy="452" r="260" fill="#fff" opacity=".075"/>
+ <path d="M-30 416 Q280 282 918 460" fill="none" stroke="#fff" stroke-width="14" opacity=".13"/>
+ <rect x="274" y="126" width="175" height="254" rx="12" fill="#ffffff" fill-opacity=".22" stroke="#ffffff" stroke-opacity=".75" stroke-width="9"/><rect x="451" y="126" width="175" height="254" rx="12" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-opacity=".75" stroke-width="9"/><path d="M450 143v232M310 190h102m-102 40h102m77-40h102m-102 40h102" stroke="#ffffff" stroke-opacity=".85" stroke-width="9" stroke-linecap="round"/>
+ <text x="44" y="463" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".85">EDUCATION</text>
+</svg>

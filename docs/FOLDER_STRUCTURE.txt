@@ -1,0 +1,168 @@
+SaveLoop-Full-Project/
+  📁 client/
+    📁 public/
+         favicon.svg
+    📁 src/
+      📁 assets/
+           README.md
+      📁 components/
+        📁 ai/
+             FloatingAI.jsx
+        📁 bookmarks/
+             BookmarkCard.jsx
+             BookmarkFilters.jsx
+             BookmarkForm.jsx
+        📁 common/
+             Brand.jsx
+             Button.jsx
+             ConfirmDialog.jsx
+             EmptyState.jsx
+             Input.jsx
+             Loader.jsx
+             PageHeader.jsx
+             PlatformIcon.jsx
+             StatCard.jsx
+        📁 layout/
+             Sidebar.jsx
+             Topbar.jsx
+      📁 config/
+           firebase.js
+      📁 hooks/
+           README.md
+      📁 layouts/
+           AdminLayout.jsx
+           AuthLayout.jsx
+           PublicLayout.jsx
+           UserLayout.jsx
+      📁 pages/
+        📁 admin/
+             AdminDashboardPage.jsx
+             AdminSettingsPage.jsx
+             AdminUserDetailPage.jsx
+             AdminUsersPage.jsx
+        📁 auth/
+             ForgotPasswordPage.jsx
+             LoginPage.jsx
+             SignupPage.jsx
+        📁 errors/
+             NotFoundPage.jsx
+             UnauthorizedPage.jsx
+        📁 public/
+             LandingPage.jsx
+        📁 user/
+             AddBookmarkPage.jsx
+             BookmarkDetailPage.jsx
+             BookmarksPage.jsx
+             CategoriesPage.jsx
+             DashboardPage.jsx
+             EditBookmarkPage.jsx
+             ProfilePage.jsx
+             RemindersPage.jsx
+             SearchPage.jsx
+             SettingsPage.jsx
+      📁 routes/
+           AdminRoute.jsx
+           AppRouter.jsx
+           ProtectedRoute.jsx
+      📁 services/
+           adminService.js
+           aiService.js
+           api.js
+           authService.js
+           bookmarkService.js
+           categoryService.js
+           demoService.js
+           reminderService.js
+           searchService.js
+      📁 store/
+           aiStore.js
+           authStore.js
+           bookmarkStore.js
+           categoryStore.js
+           uiStore.js
+      📁 utils/
+           dateUtils.js
+           platformUtils.js
+         App.jsx
+         index.css
+         main.jsx
+       .env.example
+       index.html
+       package.json
+       vercel.json
+       vite.config.js
+  📁 docs/
+    📁 UI-reference/
+         approved-landing-concept.png
+         approved-login-concept.png
+         README.md
+       ARCHITECTURE.md
+       DESIGN_SYSTEM.md
+       FEATURE_CHECKLIST.md
+       FILE_BY_FILE_GUIDE.md
+       FOLDER_STRUCTURE.txt
+       mongodb-vector-index.json
+       Original_SaveLoop_Blueprint.pdf
+       POSTMAN_TESTS.md
+       STEP_BY_STEP_LEARNING_PLAN.md
+       USER_ADMIN_FLOWS.md
+  📁 server/
+    📁 scripts/
+         promoteAdmin.js
+    📁 src/
+      📁 config/
+           aiConfig.js
+           db.js
+           firebaseAdmin.js
+      📁 controllers/
+           adminController.js
+           aiController.js
+           bookmarkController.js
+           categoryController.js
+           reminderController.js
+           searchController.js
+           userController.js
+      📁 middleware/
+           authenticate.js
+           errorHandler.js
+           requireAdmin.js
+           validateRequest.js
+      📁 models/
+           Bookmark.js
+           Category.js
+           ChatMessage.js
+           Reminder.js
+           User.js
+      📁 routes/
+           adminRoutes.js
+           aiRoutes.js
+           bookmarkRoutes.js
+           categoryRoutes.js
+           reminderRoutes.js
+           searchRoutes.js
+           userRoutes.js
+      📁 services/
+           aiProviderService.js
+           categorySuggestService.js
+           embeddingService.js
+           metadataService.js
+           platformService.js
+           queryParserService.js
+           ragService.js
+           searchService.js
+      📁 utils/
+           asyncHandler.js
+           hashtagUtils.js
+           httpError.js
+           urlUtils.js
+      📁 validators/
+           schemas.js
+         app.js
+         server.js
+    📁 tests/
+         utils.test.js
+       .env.example
+       package.json
+     .gitignore
+     package.json
+     README.md

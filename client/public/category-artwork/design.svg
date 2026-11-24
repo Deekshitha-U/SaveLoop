@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="design category illustration">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#66508c"/><stop offset="1" stop-color="#eaa6d5"/></linearGradient></defs>
+ <rect width="900" height="520" fill="url(#g)"/>
+ <circle cx="112" cy="99" r="158" fill="#fff" opacity=".075"/><circle cx="836" cy="452" r="260" fill="#fff" opacity=".075"/>
+ <path d="M-30 416 Q280 282 918 460" fill="none" stroke="#fff" stroke-width="14" opacity=".13"/>
+ <path d="M454 117c-131 0-225 86-225 198 0 92 72 147 153 147 41 0 65-17 70-43 4-27-28-54-10-75 12-15 32-7 57-7 100 0 170-48 170-106 0-57-95-114-215-114z" fill="#fff" fill-opacity=".24" stroke="#fff" stroke-width="9"/><circle cx="327" cy="268" r="22" fill="#fff"/><circle cx="383" cy="197" r="22" fill="#fff"/><circle cx="484" cy="183" r="22" fill="#fff"/><circle cx="573" cy="226" r="22" fill="#fff"/>
+ <text x="44" y="463" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".85">DESIGN</text>
+</svg>

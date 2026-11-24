@@ -1,0 +1,4 @@
+import { Outlet, Link, NavLink } from 'react-router-dom';
+import Brand from '../components/common/Brand';
+import { ArrowRight } from 'lucide-react';
+export default function PublicLayout() { return <div className="public-shell"><header className="public-nav container"><Brand/><nav><a href="/#features">Features</a><a href="/#how-it-works">How it works</a><a href="/#platforms">Platforms</a></nav><div className="public-actions"><Link to="/login">Log in</Link><Link className="btn btn-primary btn-sm" to="/signup">Get started <ArrowRight size={17}/></Link></div></header><Outlet/><footer className="public-footer container"><Brand/><span>Save once. Find anytime. Rediscover everything.</span><span>© {new Date().getFullYear()} SaveLoop</span></footer></div>; }

@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { syncUser, getMe, updateMe } from '../controllers/userController.js';
+import { authenticate } from '../middleware/authenticate.js';
+import { validateBody } from '../middleware/validateRequest.js';
+import { userPatchSchema } from '../validators/schemas.js';
+const router = Router();
+router.post('/sync', authenticate, syncUser);
+router.get('/me', authenticate, getMe);
+router.patch('/me', authenticate, validateBody(userPatchSchema), updateMe);
+export default router;

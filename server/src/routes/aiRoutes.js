@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import rateLimit from 'express-rate-limit';
+import { chat, categorize, chatHistory } from '../controllers/aiController.js';
+import { validateBody } from '../middleware/validateRequest.js';
+import { chatSchema, categorizeSchema } from '../validators/schemas.js';
+const router = Router();
+const limiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 40, standardHeaders: 'draft-7', legacyHeaders: false });
+router.post('/categorize', limiter, validateBody(categorizeSchema), categorize);
+router.post('/chat', limiter, validateBody(chatSchema), chat);
+router.get('/history', chatHistory);
+export default router;

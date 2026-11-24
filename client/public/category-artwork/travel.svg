@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="travel category illustration">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#476a82"/><stop offset="1" stop-color="#a9dce3"/></linearGradient></defs>
+ <rect width="900" height="520" fill="url(#g)"/>
+ <circle cx="112" cy="99" r="158" fill="#fff" opacity=".075"/><circle cx="836" cy="452" r="260" fill="#fff" opacity=".075"/>
+ <path d="M-30 416 Q280 282 918 460" fill="none" stroke="#fff" stroke-width="14" opacity=".13"/>
+ <circle cx="551" cy="157" r="54" fill="#fff" fill-opacity=".55"/><path d="M210 405l160-254 92 142 60-86 167 198z" fill="#fff" fill-opacity=".29" stroke="#fff" stroke-width="9" stroke-linejoin="round"/><path d="M327 218l43-67 49 76m67 38l36-58 45 60" fill="none" stroke="#fff" stroke-width="9"/>
+ <text x="44" y="463" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".85">TRAVEL</text>
+</svg>

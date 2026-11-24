@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="lifestyle category illustration">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6e7650"/><stop offset="1" stop-color="#c8d49b"/></linearGradient></defs>
+ <rect width="900" height="520" fill="url(#g)"/>
+ <circle cx="112" cy="99" r="158" fill="#fff" opacity=".075"/><circle cx="836" cy="452" r="260" fill="#fff" opacity=".075"/>
+ <path d="M-30 416 Q280 282 918 460" fill="none" stroke="#fff" stroke-width="14" opacity=".13"/>
+ <rect x="355" y="337" width="200" height="95" rx="18" fill="#fff" fill-opacity=".35" stroke="#fff" stroke-width="9"/><path d="M453 337V154m0 118c-74-12-114-55-119-100 75-5 117 32 119 100zm0-48c16-66 68-99 126-88-5 66-53 98-126 88z" fill="#fff" fill-opacity=".25" stroke="#fff" stroke-width="9" stroke-linejoin="round"/>
+ <text x="44" y="463" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".85">LIFESTYLE</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="technology category illustration">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#294665"/><stop offset="1" stop-color="#72c3cf"/></linearGradient></defs>
+ <rect width="900" height="520" fill="url(#g)"/>
+ <circle cx="112" cy="99" r="158" fill="#fff" opacity=".075"/><circle cx="836" cy="452" r="260" fill="#fff" opacity=".075"/>
+ <path d="M-30 416 Q280 282 918 460" fill="none" stroke="#fff" stroke-width="14" opacity=".13"/>
+ <rect x="286" y="130" width="330" height="226" rx="25" fill="#ffffff" fill-opacity=".17" stroke="#ffffff" stroke-opacity=".78" stroke-width="8"/><rect x="320" y="166" width="260" height="145" rx="12" stroke="#ffffff" stroke-opacity=".7" stroke-width="6" fill="#fff" fill-opacity=".09"/><path d="M390 215l-28 23 28 23m108-46l28 23-28 23m-98 30l44-110" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/><path d="M355 365h205" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/>
+ <text x="44" y="463" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".85">TECHNOLOGY</text>
+</svg>

@@ -1,0 +1,194 @@
+/* SaveLoop calm interactions. Load AFTER index.css and light-theme.css. */
+html[data-theme="light"] {
+  --rust: #b76142;
+  --orange: #c46a48;
+  --orange-light: #a84f31;
+  --text: #2d3340;
+  --muted: #777e8b;
+  --panel: #ffffff;
+  --panel2: #fffaf7;
+  --line: #ebe4df;
+  background: #fffaf7;
+}
+html[data-theme="light"] body {
+  background: linear-gradient(145deg, #fffaf7 0%, #f8f6f4 58%, #f5f7fa 100%);
+}
+html[data-theme="light"] .app-shell { background: #f8f7f5; }
+html[data-theme="light"] .app-sidebar { background: #fff; border-color: #ebe6e1; }
+html[data-theme="light"] .app-topbar { background: rgba(255,255,255,.96); border-color: #ede8e3; }
+html[data-theme="light"] .auth-shell { background: linear-gradient(137deg, #fffaf7 0%, #fff6ed 47%, #f6f8fc 100%); }
+html[data-theme="light"] .auth-card { border-color: #e8dfd8; box-shadow: 0 12px 40px rgba(76,60,48,.08); }
+html[data-theme="light"] .panel, html[data-theme="light"] .bookmark-card,
+html[data-theme="light"] .stat-card { box-shadow: 0 6px 23px rgba(53,50,46,.045); }
+
+/* Compact desktop navigation; only the tooltip fades in. */
+@media (min-width: 781px) {
+  .app-sidebar.icon-rail {
+    width: 88px;
+    min-width: 88px;
+    padding: 22px 13px 18px;
+    overflow: visible;
+    align-items: center;
+  }
+  .icon-rail .rail-brand { padding: 0 0 28px; width: 100%; justify-content: center; }
+  .icon-rail .rail-brand-full, .icon-rail .sidebar-caption,
+  .icon-rail .nav-label, .icon-rail .rail-profile-description, .icon-rail .sidebar-promo { display: none; }
+  .icon-rail .rail-brand-mark { display: block; }
+  .icon-rail .sidebar-nav { width: 100%; gap: 8px; align-items: center; }
+  .icon-rail .rail-link {
+    position: relative;
+    display: flex;
+    width: 54px;
+    height: 52px;
+    justify-content: center;
+    padding: 0;
+    overflow: visible;
+    border-radius: 13px;
+  }
+  .icon-rail .rail-link svg { flex-shrink: 0; }
+  .icon-rail .sidebar-bottom { width: 100%; }
+  .icon-rail .rail-profile { position: relative; width: 54px; justify-content: center; }
+  .icon-rail .rail-profile .avatar { flex-shrink: 0; }
+  .icon-rail .rail-tooltip {
+    position: absolute;
+    display: block;
+    left: calc(100% + 13px);
+    top: 50%;
+    transform: translate(-4px,-50%);
+    padding: 8px 11px;
+    background: #332620;
+    color: #fff;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 650;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 70;
+    pointer-events: none;
+    box-shadow: 0 6px 18px rgba(30,22,19,.12);
+    transition: opacity .15s, transform .15s, visibility .15s;
+  }
+  .icon-rail .rail-link:hover .rail-tooltip, .icon-rail .rail-link:focus-visible .rail-tooltip,
+  .icon-rail .rail-profile:hover .rail-tooltip, .icon-rail .rail-profile:focus-visible .rail-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-50%);
+  }
+}
+.rail-tooltip { display: none; }
+@media (min-width: 781px) { .icon-rail .rail-tooltip { display: block; } }
+.rail-brand-mark { display: none; }
+
+/* Account menu: simple dropdown with a short fade transition. */
+.topbar-profile-wrap { position: relative; flex-shrink: 0; }
+.topbar-profile-trigger {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 9px 5px 5px; border: 1px solid transparent;
+  background: transparent; border-radius: 40px; color: inherit;
+  transition: background .18s;
+}
+.topbar-profile-trigger:hover, .topbar-profile-trigger.is-open { background: rgba(191,96,57,.09); }
+.topbar-profile-trigger:focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
+.topbar-profile-name { max-width: 130px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 13px; font-weight: 700; }
+.topbar-profile-chevron { transition: transform .18s; }
+.topbar-profile-chevron.rotated { transform: rotate(180deg); }
+.profile-dropdown {
+  position: absolute; top: calc(100% + 12px); right: 0; z-index: 90;
+  width: min(282px, calc(100vw - 25px)); padding: 11px;
+  border: 1px solid #654539; background: #261d19;
+  border-radius: 16px; color: #fff8f3;
+  box-shadow: 0 18px 45px rgba(24,17,14,.16);
+}
+.profile-dropdown-head { display: flex; align-items: center; gap: 10px; padding: 7px 6px; }
+.profile-dropdown-head > div { display: flex; flex-direction: column; min-width: 0; gap: 3px; }
+.profile-dropdown-head strong, .profile-dropdown-head small { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.profile-dropdown-head strong { font-size: 14px; }
+.profile-dropdown-head small { font-size: 11px; color: #ceb8aa; }
+.profile-role-badge { display: inline-flex; margin: 6px 0 11px 53px; border-radius: 99px; padding: 4px 10px; background: #573322; color: #ffd3ba; font-size: 10px; font-weight: 700; }
+.profile-dropdown-links, .profile-dropdown-footer { border-top: 1px solid rgba(255,255,255,.1); padding-top: 8px; }
+.profile-dropdown-links { display: grid; gap: 2px; }
+.profile-dropdown-links a, .profile-logout { display: flex; gap: 10px; align-items: center; width: 100%; padding: 11px; border: 0; border-radius: 9px; background: transparent; color: inherit; font-size: 13px; text-align: left; }
+.profile-dropdown-links a:hover, .profile-logout:hover { background: rgba(211,117,72,.13); }
+.profile-dropdown-footer { margin-top: 7px; }
+.profile-logout { color: #ffb39e; }
+html[data-theme="light"] .profile-dropdown { background: #fff; border-color: #e9dfd6; color: #2d3340; }
+html[data-theme="light"] .profile-dropdown-head small { color: #7a818b; }
+html[data-theme="light"] .profile-role-badge { background: #fff0e5; color: #a44d30; }
+html[data-theme="light"] .profile-dropdown-links, html[data-theme="light"] .profile-dropdown-footer { border-color: #f0e9e4; }
+html[data-theme="light"] .profile-logout { color: #ac4b3b; }
+.topbar-theme-button { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; }
+html[data-theme="light"] .topbar-theme-button { background: #f8f2ec; border: 1px solid #eee5dd; }
+
+/* Login: just four very soft, slow background bubbles. */
+.polished-auth-shell { position: relative; isolation: isolate; overflow: hidden; }
+.polished-auth-shell > :not(.auth-bubble-field) { position: relative; z-index: 1; }
+.auth-bubble-field { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.auth-bubble {
+  position: absolute; bottom: -90px; border-radius: 50%;
+  background: rgba(227,145,103,.075); border: 1px solid rgba(199,121,84,.12);
+  animation: slow-rise 24s linear infinite;
+}
+.auth-bubble:nth-child(1) { left: 8%; width: 70px; height: 70px; animation-delay: -3s; }
+.auth-bubble:nth-child(2) { left: 30%; width: 38px; height: 38px; animation-delay: -11s; }
+.auth-bubble:nth-child(3) { left: 67%; width: 85px; height: 85px; animation-delay: -15s; }
+.auth-bubble:nth-child(4) { left: 88%; width: 48px; height: 48px; animation-delay: -7s; }
+@keyframes slow-rise { to { transform: translateY(-110vh); } }
+.auth-extra-right { justify-content: flex-end; }
+
+/* Gentle interaction on buttons and platform cards. */
+.btn, .platform-tile, .bookmark-card { transition: box-shadow .2s, border-color .2s, transform .2s; }
+.btn:hover:not(:disabled) { transform: translateY(-1px); }
+.polished-platform-tiles { gap: 12px; }
+.polished-platform-tiles .platform-tile {
+  position: relative; overflow: hidden; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 8px;
+  min-height: 132px; min-width: 112px; padding: 16px 12px;
+  border: 1px solid #49352d; border-radius: 15px; background: #241c19;
+  transition: transform .22s, box-shadow .22s;
+}
+.polished-platform-tiles .platform-tile:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(105,65,45,.1); }
+.polished-platform-tiles .platform-icon-ring { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: rgba(204,109,68,.1); }
+.polished-platform-tiles .platform-icon-ring svg { width: 25px; height: 25px; }
+.polished-platform-tiles .platform-tile strong { font-size: 12px; }
+.polished-platform-tiles .platform-tile small { font-size: 10px; text-align: center; }
+.polished-platform-tiles .platform-bubble { display: none; }
+html[data-theme="light"] .polished-platform-tiles .platform-tile { background: #fff; border-color: #eee3db; }
+html[data-theme="light"] .polished-platform-tiles .platform-tile small { color: #817d7a; }
+
+/* Polished but quiet light-mode form and preference panels. */
+html[data-theme="light"] .settings-card p, html[data-theme="light"] .profile-summary > p { color: #6d7480; }
+html[data-theme="light"] .settings-line { border-color: #eee7e1; }
+html[data-theme="light"] .data-table tbody tr:hover { background: #fff9f4; }
+.appearance-choice-row { flex-wrap: wrap; gap: 12px; }
+.theme-choice { display: inline-flex; align-items: center; gap: 4px; padding: 4px; border-radius: 11px; background: #eeeef1; }
+.theme-choice button { display: inline-flex; align-items: center; gap: 7px; padding: 9px 12px; border: 0; border-radius: 8px; background: transparent; color: #5b6270; font-weight: 700; font-size: 12px; }
+.theme-choice button.selected { background: #fff; color: #a84d32; box-shadow: 0 1px 7px rgba(37,37,37,.1); }
+html[data-theme="dark"] .theme-choice { background: #332621; }
+html[data-theme="dark"] .theme-choice button { color: #d1baad; }
+html[data-theme="dark"] .theme-choice button.selected { background: #583525; color: #ffe1d0; }
+@media (max-width: 780px) {
+  .app-sidebar.icon-rail { width: 260px; min-width: 260px; align-items: stretch; overflow-y: auto; }
+  .icon-rail .rail-brand-full { display: inline; }
+  .icon-rail .rail-brand-mark { display: none; }
+  .icon-rail .sidebar-caption, .icon-rail .nav-label, .icon-rail .rail-profile-description { display: initial; }
+  .icon-rail .rail-tooltip { display: none; }
+  .icon-rail .rail-brand { justify-content: space-between; }
+  .icon-rail .rail-link { width: 100%; height: auto; }
+  .icon-rail .rail-profile { width: 100%; }
+  .icon-rail .rail-profile-description { display: flex; }
+  .topbar-profile-name { display: none; }
+  .polished-platform-tiles { justify-content: flex-start; }
+}
+@media (max-width: 530px) {
+  .topbar-profile-chevron { display: none; }
+  .polished-platform-tiles .platform-tile { min-width: calc(50% - 7px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .auth-bubble { animation: none; }
+  .btn, .platform-tile, .bookmark-card { transition: none !important; }
+}
+
+/* Native date inputs should follow the visible light colour scheme. */
+html[data-theme="light"] .reminder-form input[type="datetime-local"],
+html[data-theme="light"] .reschedule-inline .input { color-scheme: light; background: #fff; color: #303845; }
