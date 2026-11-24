@@ -6,6 +6,7 @@ import AdminLayout from '../layouts/AdminLayout';
 import ProtectedRoute from './ProtectedRoute';
 import AdminRoute from './AdminRoute';
 import LandingPage from '../pages/public/LandingPage';
+import PrivacyPolicyPage from '../pages/public/PrivacyPolicyPage';
 import LoginPage from '../pages/auth/LoginPage';
 import SignupPage from '../pages/auth/SignupPage';
 import ForgotPasswordPage from '../pages/auth/ForgotPasswordPage';
@@ -26,7 +27,10 @@ import AdminSettingsPage from '../pages/admin/AdminSettingsPage';
 import UnauthorizedPage from '../pages/errors/UnauthorizedPage';
 import NotFoundPage from '../pages/errors/NotFoundPage';
 export default function AppRouter() { return <BrowserRouter><Routes>
-  <Route element={<PublicLayout/>}><Route path="/" element={<LandingPage/>}/></Route>
+  <Route element={<PublicLayout/>}>
+    <Route path="/" element={<LandingPage/>}/>
+    <Route path="/privacy" element={<PrivacyPolicyPage/>}/>
+  </Route>
   <Route element={<AuthLayout/>}><Route path="/login" element={<LoginPage/>}/><Route path="/signup" element={<SignupPage/>}/><Route path="/forgot-password" element={<ForgotPasswordPage/>}/></Route>
   <Route element={<ProtectedRoute/>}>
     <Route path="/app" element={<UserLayout/>}>
